@@ -61,9 +61,21 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void FixedUpdate()
         {
+			ball.Move(move, jump);
+			jump = false;
+			if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+			{
+				jump = true;
+
+				}
+
+
             // Call the Move function of the ball controller
-            ball.Move(move, jump);
-            jump = false;
+           // ball.Move(move, jump);
+
+            //jump = false;
         }
+	
+
     }
 }
