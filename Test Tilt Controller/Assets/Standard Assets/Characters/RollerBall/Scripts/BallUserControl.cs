@@ -63,7 +63,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         {
 			ball.Move(move, jump);
 			jump = false;
-			if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+			if(Input.touchCount != 0 && Input.GetTouch(0).phase == TouchPhase.Began)
 			{
 				jump = true;
 
